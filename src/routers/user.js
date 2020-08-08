@@ -88,7 +88,7 @@ router.patch('/users/me',auth, async (req,res)=>{
         });
         await user.save() 
         // const user = await User.findByIdAndUpdate(id,req.body,{new:true,runValidators:true})
-        res.status(201).send(user)
+        res.status(200).send(user)
     } catch (error) {
         res.status(400).send(error.message)
     }

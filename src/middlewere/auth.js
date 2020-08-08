@@ -16,7 +16,7 @@ const auth = async (req,res,next)=>{
     next()
     
    } catch (error) {
-       res.send({error:'please Authentecation'})
+       res.status(400).send({error:'please Authentecation'})
    }
 }
 

@@ -4,15 +4,26 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "env-cmd ./config/dev.env nodemon src/index.js"
+    "start": "node dist/app.js",
+    "dev": "env-cmd ./config/dev.env nodemon src/index.js",
+    "test": "env-cmd ./config/test.env jest --watchAll --runInBand",
+    "bulid": "tsc -p ."
+  },
+  "jest": {
+    "testEnvironment": "node"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@sendgrid/mail": "^7.0.1",
+    "@types/bcryptjs": "^2.4.2",
+    "@types/express": "^4.17.7",
+    "@types/jsonwebtoken": "^8.5.0",
+    "@types/node": "^14.0.27",
+    "@types/validator": "^13.1.0",
     "bcryptjs": "^2.4.3",
+    "dotenv": "^8.2.0",
     "env-cmd": "^8.0.2",
     "express": "^4.16.4",
     "jsonwebtoken": "^8.4.0",
@@ -21,9 +32,14 @@
     "multer": "^1.4.1",
     "save-dev": "0.0.1-security",
     "sharp": "^0.25.2",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7",
     "validator": "^10.9.0"
   },
   "devDependencies": {
-    "nodemon": "^1.19.4"
+    "@types/mongoose": "^5.7.36",
+    "jest": "^23.6.0",
+    "nodemon": "^1.19.4",
+    "supertest": "^3.4.1"
   }
 }

@@ -8,12 +8,13 @@ const sendWelcomeEmail = (email,name)=>{
         from:'karimomakram11@gmail.com',
         subject:'Welcome to Task Manager',
         text:`welcome ${name} , `
-    }).then(() => {
-        console.log('Message sent')
-    }).catch((error) => {
-        console.log(error.message)
-        // console.log(error.response.body.errors[0].message)
     })
+    // .then(() => {
+    //     console.log('Message sent')
+    // }).catch((error) => {
+    //     console.log(error.message)
+    //     // console.log(error.response.body.errors[0].message)
+    // })
 }
 
 const sendCancledEmail = (email,name)=>{
@@ -22,12 +23,13 @@ const sendCancledEmail = (email,name)=>{
            from:'karimomakram11@gmail.com',
            subject:'Welcome to Task Manager',
            text:`ازيك يكلب ${name}`
-       }).then(() => {
-           console.log('Message sent')
-       }).catch((error) => {
-           console.log(error.message)
-           // console.log(error.response.body.errors[0].message)
        })
+    //    .then(() => {
+    //        console.log('Message sent')
+    //    }).catch((error) => {
+    //        console.log(error.message)
+    //        // console.log(error.response.body.errors[0].message)
+    //    })
    }
 
 
